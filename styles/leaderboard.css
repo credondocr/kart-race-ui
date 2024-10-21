@@ -1,0 +1,76 @@
+.leaderboard-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .leaderboard-header {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .leaderboard-container p {
+    font-size: 1.5vw; /* Ajusta el tamaño de la fuente según lo que prefieras */
+    margin: 10px 0;   /* Ajusta el margen si es necesario */
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .leaderboard-table thead {
+
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 10px;
+    border: 1px solid #555;
+    text-align: center;
+  }
+  
+  .leaderboard-table td.position-1 {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .leaderboard-table td.position-2 {
+    background-color: silver;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .leaderboard-table td.position-3 {
+    background-color: #cd7f32; /* Color bronce */
+    color: black;
+    font-weight: bold;
+  }
+  
+  .leaderboard-table tr:nth-child(n+4) {
+    background-color: #444;
+  }
+  
+  .leaderboard-table td.position-rest {
+    background-color: #555;
+    color: white;
+  }
+  
+  .leaderboard-table tr:hover {
+    background-color: #666;
+  }
+  
+  .leaderboard-table td {
+    font-size: 30px;
+  }
+  
+  .leaderboard-table th {
+    color: white;
+    font-weight: normal;
+  }
