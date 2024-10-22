@@ -76,3 +76,23 @@ tbody tr:hover {
 }
 
 
+
+
+/* Contenedor principal para el layout de la app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos el 100% de la altura de la ventana */
+}
+
+/* El contenido debe ocupar el máximo espacio disponible */
+.content {
+  flex: 1; /* Hace que el contenido se expanda para ocupar el espacio */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: transparent; /* Sin fondo */
+}
