@@ -160,3 +160,57 @@
     font-size: 1.5rem; /* Tamaño de la flecha */
     margin-left: 0.5rem; /* Espacio entre la leyenda y la flecha */
   }
+
+
+  /* Estilos de la tabla y demás */
+.leaderboard-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative; /* Para posicionar el mensaje de récord */
+  }
+  
+  .leaderboard-header {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  /* Nuevo mensaje de récord del día */
+  .record-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFD700;
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 10;
+    opacity: 0;
+    animation: epicFadeInOut 5s forwards; /* Animación de entrada y salida */
+  }
+  
+  @keyframes epicFadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translate(-50%, -50%);
+    }
+    20% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.5) translate(-50%, -50%);
+    }
+  }
