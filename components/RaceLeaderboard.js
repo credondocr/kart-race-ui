@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 
 const RaceLeaderboard = () => {
   const [data, setData] = useState(null);
@@ -18,7 +19,7 @@ const RaceLeaderboard = () => {
       }
     };
 
-    const intervalId = setInterval(fetchData, 1000);
+    const intervalId = setInterval(fetchData, 1000); // Se actualiza cada segundo
     return () => clearInterval(intervalId);
   }, []);
 
@@ -30,7 +31,7 @@ const RaceLeaderboard = () => {
     return <p>Loading...</p>;
   }
 
-  const { scoreboard } = data;
+  const { race, scoreboard } = data;
 
   const getPositionClass = (position) => {
     if (position === "1") return "position-1";
@@ -39,10 +40,22 @@ const RaceLeaderboard = () => {
     return "position-rest";
   };
 
+  // Generar la URL de la carrera actual
+  const raceUrl = `https://leaderboard.fik.cr/race/${race.id}`;
+
   return (
     <div className="leaderboard-container">
-      <h1 className="leaderboard-header">{data.race.race_name}</h1>
-      <p>Track: {data.race.track}</p>
+      {/* Actualizar dinámicamente el QR */}
+      <div className="header-container">
+      <div className="qr-code">
+          <QRCodeSVG value={raceUrl} /> {/* El QR se actualiza con el nuevo ID */}
+        </div>
+        <div className="race-details">
+          <h1 className="leaderboard-header">{race.race_name}</h1>
+          <p>Track: {race.track}</p>
+        </div>
+      </div>
+
       <table className="leaderboard-table">
         <thead>
           <tr>

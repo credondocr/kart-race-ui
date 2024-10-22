@@ -1,31 +1,51 @@
+/* Estilos generales del contenedor de la tabla de clasificación */
 .leaderboard-container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
     color: white;
     font-family: Arial, sans-serif;
+    overflow-x: auto; /* Habilitar scroll horizontal si es necesario */
   }
   
+  /* Estilos del encabezado del leaderboard */
   .leaderboard-header {
     font-size: 40px;
     margin-bottom: 10px;
   }
-
-  .leaderboard-container p {
-    font-size: 1.5vw; /* Ajusta el tamaño de la fuente según lo que prefieras */
-    margin: 10px 0;   /* Ajusta el margen si es necesario */
+  
+  /* Estilos del contenedor del encabezado que incluye los detalles de la carrera y el código QR */
+  .header-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido en el contenedor */
+    align-items: center; /* Alinear verticalmente */
+    gap: 1rem; /* Espacio entre los detalles y el QR */
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se acomoden en varias líneas si es necesario */
   }
   
+  /* Estilos de los detalles de la carrera */
+  .race-details {
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  /* Estilos del contenedor del código QR */
+  .qr-code {
+    /* Elimina cualquier margen adicional */
+  }
+  
+  /* Tabla de clasificación */
   .leaderboard-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    table-layout: fixed; /* Permitir que las columnas tengan un ancho fijo */
   }
   
   .leaderboard-table thead {
-
+    background-color: #333;
   }
   
   .leaderboard-table th,
@@ -68,9 +88,54 @@
   
   .leaderboard-table td {
     font-size: 30px;
+    word-wrap: break-word; /* Asegura que las palabras largas se dividan en varias líneas */
   }
   
   .leaderboard-table th {
     color: white;
     font-weight: normal;
+  }
+  
+  /* Hacer que el layout sea responsive */
+  @media (max-width: 768px) {
+    /* El contenedor general ajusta su tamaño */
+    .leaderboard-container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    /* Asegurar que los elementos del header se acomoden bien en pantallas pequeñas */
+    .header-container {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      align-items: center;
+    }
+  
+    /* Ajustar el tamaño del QR y los detalles de la carrera */
+    .race-details, .qr-code {
+      margin: 10px 0;
+    }
+  
+    .qr-code {
+      margin-top: 10px;
+    }
+  
+    /* Ajustar las celdas de la tabla para pantallas pequeñas */
+    .leaderboard-table {
+      font-size: 0.8em;
+    }
+  
+    /* Asegurar que las tablas sean scrollables en dispositivos móviles */
+    .leaderboard-container {
+      overflow-x: auto; /* Permitir scroll horizontal si es necesario */
+    }
+  
+    /* Ajustes de fuentes en dispositivos móviles */
+    .leaderboard-table td {
+      font-size: 18px;
+      padding: 8px;
+    }
+  
+    .leaderboard-header {
+      font-size: 30px; /* Reducir tamaño de encabezado en pantallas pequeñas */
+    }
   }
