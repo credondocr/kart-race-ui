@@ -46,7 +46,7 @@ const RaceLeaderboard = () => {
   return (
     <div className="leaderboard-container">
       <div className="header-container">
-      <p className="qr-legend">Escanea para ver tu tiempos</p>
+      <p className="qr-legend">Escanea para ver tu tiempo</p>
         
       </div>
       <QRCodeSVG value={raceUrl} size={90}/>  
