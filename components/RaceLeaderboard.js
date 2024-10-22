@@ -45,17 +45,11 @@ const RaceLeaderboard = () => {
 
   return (
     <div className="leaderboard-container">
-      {/* Actualizar dinámicamente el QR */}
       <div className="header-container">
-      <div className="qr-code">
-          <QRCodeSVG value={raceUrl} /> {/* El QR se actualiza con el nuevo ID */}
-        </div>
-        <div className="race-details">
-          <h1 className="leaderboard-header">{race.race_name}</h1>
-          <p>Track: {race.track}</p>
-        </div>
+      <p className="qr-legend">Escanea para ver tu tiempos</p>
+        
       </div>
-
+      <QRCodeSVG value={raceUrl} size={90}/>  
       <table className="leaderboard-table">
         <thead>
           <tr>

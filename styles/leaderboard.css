@@ -21,8 +21,6 @@
     display: flex;
     justify-content: center; /* Centra el contenido en el contenedor */
     align-items: center; /* Alinear verticalmente */
-    gap: 1rem; /* Espacio entre los detalles y el QR */
-    padding-bottom: 20px;
     flex-wrap: wrap; /* Permitir que los elementos se acomoden en varias líneas si es necesario */
   }
   
@@ -31,10 +29,7 @@
     text-align: left; /* Alinea el texto a la izquierda */
   }
   
-  /* Estilos del contenedor del código QR */
-  .qr-code {
-    /* Elimina cualquier margen adicional */
-  }
+
   
   /* Tabla de clasificación */
   .leaderboard-table {
@@ -87,7 +82,7 @@
   }
   
   .leaderboard-table td {
-    font-size: 30px;
+    font-size: 1.6rem;
     word-wrap: break-word; /* Asegura que las palabras largas se dividan en varias líneas */
   }
   
@@ -138,4 +133,30 @@
     .leaderboard-header {
       font-size: 30px; /* Reducir tamaño de encabezado en pantallas pequeñas */
     }
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .qr-container {
+    text-align: center;
+  }
+  
+  .qr-legend {
+    font-size: 2rem;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .qr-legend .arrow {
+    font-size: 1.5rem; /* Tamaño de la flecha */
+    margin-left: 0.5rem; /* Espacio entre la leyenda y la flecha */
   }

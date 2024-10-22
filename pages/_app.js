@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       {/* Footer */}
       <footer className="footer">
         <p>
-          Con amor ❤️ al kartismo - Cesar Redondo - <a href="mailto:credondocr@gmail.com">credondocr@gmail.com</a>
+          Con amor ❤️ al kartismo - Redondo 
         </p>
       </footer>
     </div>
