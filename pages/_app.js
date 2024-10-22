@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
     {/* Google Tag Manager Script */}
     <Script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=G-TBS0QTFKV1`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-ZDXYJ2TNWF`}
       ></Script>
       <Script id="gtag-init">
         {`
