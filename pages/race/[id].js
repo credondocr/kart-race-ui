@@ -58,7 +58,7 @@ const RaceDetails = () => {
   const data = {
     labels: lapLabels,
     datasets: sortedRacers.map((racer, racerIndex) => ({
-      label: `${racer.nickname} (Kart #${racer.kart_number})`,
+      label: `${racer.nickname} Kart #${racer.kart_number}`,
       data: lapData[racerIndex],
       fill: false,
       borderColor: `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.5)`,
@@ -78,7 +78,7 @@ const RaceDetails = () => {
       tooltip: {
         callbacks: {
           label: (tooltipItem) => {
-            return `Lap Time: ${tooltipItem.raw ? tooltipItem.raw.toFixed(3) : 'N/A'}s`;
+            return `${tooltipItem.raw ? tooltipItem.raw.toFixed(3) : 'N/A'}s`;
           },
         },
       },
@@ -131,7 +131,7 @@ const RaceDetails = () => {
             {sortedRacers.map((racer) => (
               <th key={racer.id}>
                 <div>{racer.nickname}</div>
-                <div>(Kart #{racer.kart_number})</div>
+                <div>Kart #{racer.kart_number}</div>
               </th>
             ))}
           </tr>
