@@ -14,7 +14,7 @@ const RaceDetails = () => {
 
   useEffect(() => {
     if (!id) return;
-    ReactGA.initialize('G-TBS0QTFKV1');
+    ReactGA.initialize('G-ZDXYJ2TNWF');
     ReactGA.pageview(window.location.pathname + window.location.search);
     const fetchRaceDetails = async () => {
       try {

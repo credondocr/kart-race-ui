@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-TBS0QTFKV1');
+          gtag('config', 'G-ZDXYJ2TNWF');
         `}
       </Script>
     
