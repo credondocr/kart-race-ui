@@ -19,7 +19,7 @@ const RaceLeaderboard = () => {
       }
     };
 
-    const intervalId = setInterval(fetchData, 1000); // Se actualiza cada segundo
+    const intervalId = setInterval(fetchData, 30000); // Se actualiza cada segundo
     return () => clearInterval(intervalId);
   }, []);
 
