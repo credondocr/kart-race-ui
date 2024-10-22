@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import ReactGA from 'react-ga';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -13,7 +14,8 @@ const RaceDetails = () => {
 
   useEffect(() => {
     if (!id) return;
-
+    ReactGA.initialize('G-TBS0QTFKV1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
     const fetchRaceDetails = async () => {
       try {
         const response = await fetch(`/api/race/${id}`);
