@@ -16,6 +16,11 @@ const RaceDetails = () => {
     if (!id) return;
     ReactGA.initialize('G-ZDXYJ2TNWF');
     ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.event({
+        category: 'User',
+        action: 'Visited Race Page',
+        label: `Race ID: ${id}`,
+      });
     const fetchRaceDetails = async () => {
       try {
         const response = await fetch(`/api/race/${id}`);
