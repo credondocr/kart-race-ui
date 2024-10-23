@@ -37,7 +37,7 @@ const RaceLeaderboard = () => {
           const gap = result.fastest.length > 1 
             ? (result.fastest[0].lap_time - result.fastest[1].lap_time).toFixed(3)
             : null;
-          setRecordMessage(`¡Nuevo récord del día! - ${result.fastest[0].nickname} con ${result.fastest[0].lap_time}s ${gap ? `(Gap: ${gap}s)` : ''}`);
+          setRecordMessage(`${result.fastest[0].nickname} con ${result.fastest[0].lap_time}s ${gap ? `(Gap: ${gap}s)` : ''}`);
 
           // Disparar el confeti
           triggerConfetti();
@@ -48,7 +48,7 @@ const RaceLeaderboard = () => {
           setTimeout(() => setRecordMessage(""), 9000);
         } else if (!previousFastest) {
             if (result.fastest[0]) {
-                setRecordMessage(`Record del día! - ${result.fastest[0]?.nickname} con ${result.fastest[0]?.lap_time}s `);
+                setRecordMessage(`${result.fastest[0]?.nickname} con ${result.fastest[0]?.lap_time}s `);
                 triggerConfetti();
                 setPreviousFastest(result.fastest[0]);
             }
@@ -123,7 +123,7 @@ const RaceLeaderboard = () => {
     <div className="leaderboard-container">
       {/* Mostrar el mensaje de nuevo récord si existe */}
       {recordMessage && (
-        <div className="record-message">{recordMessage}</div>
+        <div className="record-message">¡Nuevo récord del día! < br/>{recordMessage}</div>
       )}
 
       <div className="header-container">
