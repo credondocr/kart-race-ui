@@ -128,9 +128,10 @@ const RaceLeaderboard = () => {
 
       <div className="header-container">
         <p className="qr-legend">Escanea para ver tu tiempo</p>
+        <QRCodeSVG value={raceUrl} size={90} />
       </div>
 
-      <QRCodeSVG value={raceUrl} size={90} />
+      
 
       <table className="leaderboard-table">
         <thead>
