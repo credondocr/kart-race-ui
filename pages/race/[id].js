@@ -160,7 +160,7 @@ const RaceDetails = () => {
           {/* Fila de promedio, usando el average_lap_time del API */}
           <tr>
             <td><strong>➗</strong></td>
-            {scoreboard.map((racer) => (
+            {scoreboard?.map((racer) => (
               <td key={racer.id}>
                 <strong>{racer.average_lap_time}</strong>
               </td>

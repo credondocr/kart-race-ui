@@ -144,7 +144,7 @@ const RaceLeaderboard = () => {
           </tr>
         </thead>
         <tbody>
-          {scoreboard.map((racer) => (
+          {scoreboard?.map((racer) => (
             <tr key={racer.racer_id}>
               <td className={getPositionClass(racer.position)}>{racer.position}</td>
               <td className={getPositionClass(racer.position)}>{racer.nickname}</td>
