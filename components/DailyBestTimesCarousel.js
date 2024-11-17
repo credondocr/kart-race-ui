@@ -12,7 +12,7 @@ const DailyBestTimesCarousel = () => {
           throw new Error("Error fetching fastest times");
         }
         const data = await response.json();
-        setFastestTimes(data.fastest.slice(0, 10)); // Solo los 5 mejores
+        setFastestTimes(data.fastest.slice(0, 5)); 
       } catch (error) {
         setError(error.message);
       }
@@ -20,7 +20,6 @@ const DailyBestTimesCarousel = () => {
 
     fetchFastestTimes();
 
-    // Actualizar cada 5 minutos
     const intervalId = setInterval(fetchFastestTimes, 5 * 60 * 1000);
     return () => clearInterval(intervalId);
   }, []);
@@ -33,7 +32,7 @@ const DailyBestTimesCarousel = () => {
     <div  className=" custom-text header-container ext-5xl fixed bottom-0 left-0 w-full bg-gray-800 text-white text-center h-10 flex items-center overflow-hidden">
       <div className="flex items-center  animate-marquee whitespace-nowrap">
         {fastestTimes.map((time, index) => (
-          <div key={index} className="inline-block px-8">
+          <div key={index} className="inline-block px-6 text-color">
             {`${index + 1} - ${time.nickname}`} <span className="time-color">{time.lap_time.toFixed(3)}</span>
           </div>
         ))}

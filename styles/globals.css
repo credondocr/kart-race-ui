@@ -112,9 +112,16 @@ tbody tr:hover {
 }
 
 .custom-text {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  
 }
 
 .time-color {
   color: yellow;
+  padding: 0.7rem;
+}
+
+.name-color {
+  color: white;
+  font-size: 0.7rem
 }
