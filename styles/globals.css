@@ -93,6 +93,28 @@ tbody tr:hover {
 /* Footer */
 .footer {
   text-align: center;
-  padding: 10px 0;
   background-color: transparent; /* Sin fondo */
+}
+
+
+/* @keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.custom-text {
+  font-size: 1.6rem;
+}
+
+.time-color {
+  color: yellow;
 }

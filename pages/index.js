@@ -1,5 +1,6 @@
 import RaceLeaderboard from "../components/RaceLeaderboard";
 
+
 const Home = () => {
   return (
     <div>

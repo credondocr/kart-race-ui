@@ -4,6 +4,10 @@ import '../styles/race-table.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+
+import DailyBestTimesCarousel from "../components/DailyBestTimesCarousel";
+
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
@@ -44,9 +48,7 @@ function MyApp({ Component, pageProps }) {
 
       {/* Footer */}
       <footer className="footer">
-        <p>
-          Con amor ❤️ al kartismo - Redondo 
-        </p>
+      <DailyBestTimesCarousel />
       </footer>
     </div>
     </>
