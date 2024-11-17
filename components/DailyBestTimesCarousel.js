@@ -33,7 +33,7 @@ const DailyBestTimesCarousel = () => {
       <div className="flex items-center  animate-marquee whitespace-nowrap">
         {fastestTimes.map((time, index) => (
           <div key={index} className="inline-block px-6 text-color">
-            {`${index + 1} - ${time.nickname}`} <span className="time-color">{time.lap_time.toFixed(3)}</span>
+            <span className="name-color">{`${index + 1} - ${time.nickname}`}</span> <span className="time-color">{time.lap_time.toFixed(3)}</span>
           </div>
         ))}
       </div>
