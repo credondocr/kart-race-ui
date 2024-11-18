@@ -140,17 +140,20 @@ const RaceLeaderboard = () => {
             <th>Nickname</th>
             <th>Kart</th>
             <th>Fastest Lap</th>
+            <th>Gap</th>
             <th>Average Lap</th>
           </tr>
         </thead>
         <tbody>
           {scoreboard?.map((racer) => (
             <tr key={racer.racer_id}>
-              <td className={getPositionClass(racer.position)}>{racer.position}</td>
-              <td className={getPositionClass(racer.position)}>{racer.nickname}</td>
-              <td className={getPositionClass(racer.position)}>{racer.kart_num}</td>
-              <td className={getPositionClass(racer.position)}>{racer.fastest_lap_time}</td>
-              <td className={getPositionClass(racer.position)}>{racer.average_lap_time}</td>
+              <td className="position-1">{racer.position}</td>
+              <td className="position-1">{racer.nickname}</td>
+              <td className="position-1">{racer.kart_num}</td>
+              <td className="position-1">{racer.fastest_lap_time}</td>
+              <td className="position-1">{racer.gap}</td>
+              <td className="position-1">{racer.average_lap_time}</td>
+              
             </tr>
           ))}
         </tbody>

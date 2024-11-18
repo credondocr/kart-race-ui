@@ -1,6 +1,6 @@
 /* Estilos generales del contenedor de la tabla de clasificación */
 .leaderboard-container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
@@ -46,25 +46,13 @@
   
   .leaderboard-table th,
   .leaderboard-table td {
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #555;
     text-align: center;
   }
   
   .leaderboard-table td.position-1 {
-    background-color: gold;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .leaderboard-table td.position-2 {
-    background-color: silver;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .leaderboard-table td.position-3 {
-    background-color: #cd7f32; /* Color bronce */
+    background-color: white;
     color: black;
     font-weight: bold;
   }
@@ -166,7 +154,7 @@
 
   /* Estilos de la tabla y demás */
 .leaderboard-container {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
