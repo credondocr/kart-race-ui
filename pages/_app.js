@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
 
       {/* Footer */}
       <footer className="footer">
-      <DailyBestTimesCarousel />
+      {/* <DailyBestTimesCarousel /> */}
       </footer>
     </div>
     </>

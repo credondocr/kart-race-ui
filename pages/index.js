@@ -1,4 +1,5 @@
-import RaceLeaderboard from "../components/RaceLeaderboard";
+import PrintedLeaderboard from "../components/PrintedLeaderboard";
+
 
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
       {/* Header con el logo centrado */}
 
       <main>
-        <RaceLeaderboard />
+        <PrintedLeaderboard />
       </main>
     </div>
   );
