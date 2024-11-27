@@ -55,7 +55,7 @@ const PrintedLeaderboard = () => {
       {currentRaceNumber ? (
   <iframe
     ref={iframeRef}
-    src={`https://frcostarica.clubspeedtiming.com/privatewww/allracersresults-frcostarica.aspx?HeatNo=${currentRaceNumber}`}
+    src={`http://frcostarica.clubspeedtiming.com/privatewww/allracersresults-frcostarica.aspx?HeatNo=${currentRaceNumber}`}
     style={{
       width: "100%",
       height: "100vh",
