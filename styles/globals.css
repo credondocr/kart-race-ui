@@ -1,6 +1,6 @@
 html,
 body {
-
+  background-image: url('/background_1080p.jpg'); /* Ruta relativa a la carpeta public */
   background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
   background-position: center;
   background-repeat: no-repeat;
