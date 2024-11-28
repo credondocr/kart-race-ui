@@ -64,7 +64,7 @@ const RaceLeaderboard = () => {
     const intervalId = setInterval(() => {
       fetchData();
       fetchFastestData();
-    }, 30000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, [previousFastest]);
