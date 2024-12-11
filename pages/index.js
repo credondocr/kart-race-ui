@@ -8,8 +8,8 @@ const Home = () => {
       {/* Header con el logo centrado */}
 
       <main>
-
-        <RaceLeaderboard />
+        <PrintedLeaderboard/>
+        {/* <RaceLeaderboard /> */}
       </main>
     </div>
   );
