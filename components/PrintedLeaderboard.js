@@ -32,11 +32,11 @@ const PrintedLeaderboard = () => {
     const iframe = iframeRef.current;
 
     const handleIframeLoad = () => {
-      // Desplaza el viewport hacia el final del contenido
-      window.scrollTo({
-        top: window.innerHeight, // Altura del viewport actual
-        behavior: "smooth", // Desplazamiento suave
-      });
+    //   // Desplaza el viewport hacia el final del contenido
+    //   window.scrollTo({
+    //     top: window.innerHeight, // Altura del viewport actual
+    //     behavior: "smooth", // Desplazamiento suave
+    //   });
     };
 
     if (iframe) {
@@ -58,7 +58,7 @@ const PrintedLeaderboard = () => {
     src={`https://frcostarica.clubspeedtiming.com/privatewww/allracersresults-frcostarica.aspx?HeatNo=${currentRaceNumber}`}
     style={{
       width: "100%",
-      height: "100vh",
+      height: "1500px",
       border: "none",
     }}
   ></iframe>
